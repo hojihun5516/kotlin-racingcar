@@ -1,14 +1,9 @@
 package race
 
 class Car {
-    var current = ""
+    var movedDistance = mutableListOf<Boolean>()
 
-    fun move(): String {
-        current += MOVEMENT
-        return current
-    }
-
-    companion object {
-        const val MOVEMENT = "-"
+    fun move(moveMent: Boolean) {
+        movedDistance.add(moveMent)
     }
 }
